@@ -1,0 +1,122 @@
+.cta {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.cta__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cta__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(5,46,22,0.88), rgba(13,61,30,0.78));
+}
+
+.cta__particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta__particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(74, 222, 128, 0.12);
+  animation: float 5s ease-in-out infinite;
+}
+
+.cta__particle--1 { width: 100px; height: 100px; top: 15%; left: 5%; animation-delay: 0s; }
+.cta__particle--2 { width: 60px; height: 60px; top: 60%; right: 8%; animation-delay: 1s; }
+.cta__particle--3 { width: 140px; height: 140px; bottom: 10%; left: 15%; animation-delay: 2s; opacity: 0.5; }
+.cta__particle--4 { width: 50px; height: 50px; top: 25%; right: 20%; animation-delay: 0.5s; }
+.cta__particle--5 { width: 80px; height: 80px; bottom: 20%; right: 12%; animation-delay: 1.5s; }
+.cta__particle--6 { width: 40px; height: 40px; top: 70%; left: 40%; animation-delay: 2.5s; }
+
+.cta__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.cta__text {
+  max-width: 640px;
+  text-align: center;
+}
+
+.cta__badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 24px;
+}
+
+.cta__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.cta__title-accent {
+  background: linear-gradient(135deg, var(--green-400), var(--green-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta__subtitle {
+  font-size: 1.0625rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cta__btn-primary {
+  padding: 16px 36px;
+  font-size: 1rem;
+}
+
+.cta__btn-contact {
+  padding: 16px 32px;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .cta {
+    padding: 80px 0;
+  }
+  .cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta__actions .btn {
+    justify-content: center;
+  }
+}

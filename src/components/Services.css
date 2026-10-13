@@ -1,0 +1,108 @@
+.services {
+  background: var(--neutral-50);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid var(--neutral-200);
+  cursor: default;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--svc-color, var(--green-600));
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card__icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: color-mix(in srgb, var(--svc-color, var(--green-600)) 12%, white);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--svc-color, var(--green-600));
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.service-card:hover .service-card__icon-wrap {
+  background: var(--svc-color, var(--green-600));
+  color: var(--white);
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.service-card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 12px;
+  transition: var(--transition);
+}
+
+.service-card:hover .service-card__title {
+  color: var(--svc-color, var(--green-600));
+}
+
+.service-card__desc {
+  font-size: 0.9rem;
+  color: var(--neutral-700);
+  line-height: 1.7;
+}
+
+.service-card__hover-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: width 0.4s ease;
+}
+
+.service-card:hover .service-card__hover-bar {
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: 28px 24px;
+  }
+}
