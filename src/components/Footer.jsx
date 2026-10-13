@@ -49,6 +49,8 @@ const socials = [
   { icon: LinkedinIcon, label: 'LinkedIn', href: '#' },
 ];
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export default function Footer() {
   const scrollTo = (href) => {
     const el = document.querySelector(href);
@@ -156,7 +158,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <p>© {new Date().getFullYear()} Green Home Developers. All Rights Reserved.</p>
+          <p>© {CURRENT_YEAR} Green Home Developers. All Rights Reserved.</p>
           <div className="footer__bottom-links">
             <a href="#" className="footer__bottom-link">Privacy Policy</a>
             <a href="#" className="footer__bottom-link">Terms of Service</a>

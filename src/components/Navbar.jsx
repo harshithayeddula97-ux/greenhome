@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Home, ChevronDown } from 'lucide-react';
+import { Menu, X, Home } from 'lucide-react';
 import './Navbar.css';
 
 const navLinks = [

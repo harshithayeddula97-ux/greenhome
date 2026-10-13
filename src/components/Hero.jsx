@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import { ArrowRight, PlayCircle } from 'lucide-react';
+import { useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
 import './Hero.css';
 
 const stats = [

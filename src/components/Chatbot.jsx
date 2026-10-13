@@ -163,7 +163,7 @@ const SUGGESTED = [
   'Where are your projects located?',
   'What services do you provide?',
   'How can I enquire about a property?',
-  'Why choose Green Home Developers?',
+  'How can I contact Green Home Developers?',
 ];
 
 // ─── Chat Message Component ───────────────────────────────────────────────────
@@ -288,7 +288,7 @@ export default function Chatbot() {
         aria-label="Open AI Assistant"
         id="chatbot-fab"
       >
-        {isOpen ? <X size={24} /> : <Bot size={24} />}
+        {isOpen ? <X size={24} /> : <span style={{ fontSize: '1.25rem', lineHeight: 1 }}>🤖</span>}
         {!isOpen && (
           <span className="chatbot__fab-label">AI Assistant</span>
         )}

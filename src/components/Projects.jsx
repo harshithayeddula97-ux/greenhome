@@ -76,7 +76,7 @@ export default function Projects() {
         </div>
 
         <div className="projects__grid">
-          {projects.map((project, i) => (
+          {projects.map((project) => (
             <article key={project.id} className="project-card reveal">
               <div className="project-card__image-wrap">
                 <img
